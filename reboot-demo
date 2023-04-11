@@ -1,0 +1,16 @@
+---
+
+- name: Reboot Linux
+  hosts: node1
+  become: yes
+
+  tasks:
+    - name: Reboot linux hosts
+      reboot:
+
+- name: Reboot Windows
+  hosts: windows
+
+  tasks:
+    - name: Reboot windows hosts
+      win_reboot:
